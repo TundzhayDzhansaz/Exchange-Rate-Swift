@@ -26,11 +26,7 @@ class HRCCell: UITableViewCell {
     
     
   func setupMVCCell(){
-    let disclosureIndicatorIcon = ExchangeGenerator.makeViewIconWithTintColor(setImage: UIImage(named: "DisclosureIndicatorIcon")!, setImageColor: UIColor(named: "CellLabelColor")!)
-    let disclosureIndicatorView = disclosureIndicatorIcon
-    self.accessoryView = disclosureIndicatorView
-    self.backgroundColor = UIColor(named: "CellBackground")!
-      
+    self.selectionStyle = .none
     let selectedBackgroundImage = UIView()
     selectedBackgroundImage.backgroundColor = UIColor(named: "CellSelectedBackground")!.withAlphaComponent(0.5)
     self.selectedBackgroundView = selectedBackgroundImage
