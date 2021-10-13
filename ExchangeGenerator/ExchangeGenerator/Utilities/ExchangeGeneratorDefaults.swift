@@ -38,4 +38,16 @@ class ExchangeGenerator {
     imageView.setImageColor(color: setImageColor)
     return imageView
   }
+  
+  static func convertStringToDictionary(text: String) -> [String:AnyObject]? {
+     if let data = text.data(using: .utf8) {
+         do {
+             let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:AnyObject]
+             return json
+         } catch {
+             print("Something went wrong")
+         }
+     }
+     return nil
+ }
 }

@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //MARK:- UI initialization
     window = UIWindow(frame: UIScreen.main.bounds)
-    //self.window?.rootViewController = HistoricalRateController(currencyName: "AED", date: "2021-10-10")
+    //self.window?.rootViewController = HistoricalRateController(currencyName: "AED", currencyPrice: 13.9, date: "2021-10-10")
     self.window?.rootViewController = MainViewController()
     self.window?.makeKeyAndVisible()
     

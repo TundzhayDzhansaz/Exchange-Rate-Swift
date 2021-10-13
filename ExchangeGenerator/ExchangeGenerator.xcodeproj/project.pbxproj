@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,7 @@
 		7BF3C3DD27174587001684EA /* HRCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF3C3DC27174587001684EA /* HRCCell.swift */; };
 		7BF3C3DF2717466A001684EA /* HistoricalCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF3C3DE2717466A001684EA /* HistoricalCurrency.swift */; };
 		7BF3C3E127175076001684EA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF3C3E027175076001684EA /* NavigationController.swift */; };
+		7BF3C3E32717A053001684EA /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF3C3E22717A053001684EA /* Dictionary+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		7BF3C3DC27174587001684EA /* HRCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRCCell.swift; sourceTree = "<group>"; };
 		7BF3C3DE2717466A001684EA /* HistoricalCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalCurrency.swift; sourceTree = "<group>"; };
 		7BF3C3E027175076001684EA /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		7BF3C3E22717A053001684EA /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				7BF3C3D0271701D7001684EA /* DeviceControl.swift */,
 				7BF3C3D82717415C001684EA /* UIImage+Extension.swift */,
 				7BF3C3E027175076001684EA /* NavigationController.swift */,
+				7BF3C3E22717A053001684EA /* Dictionary+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				7BF3C3BE2716E822001684EA /* ExchangeGeneratorDefaults.swift in Sources */,
 				7BF3C3AA2716E60D001684EA /* MainViewController.swift in Sources */,
 				7BF3C3C22716E8BE001684EA /* CATransition+Extension.swift in Sources */,
+				7BF3C3E32717A053001684EA /* Dictionary+Extension.swift in Sources */,
 				7BF3C3DB271743B2001684EA /* HistoricalRateController.swift in Sources */,
 				7BF3C3DF2717466A001684EA /* HistoricalCurrency.swift in Sources */,
 				7BF3C3C02716E89D001684EA /* UIView+Extensions.swift in Sources */,

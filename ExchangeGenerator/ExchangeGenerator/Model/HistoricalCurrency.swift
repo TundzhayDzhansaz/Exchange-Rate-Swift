@@ -12,14 +12,16 @@ import UIKit
 
 //MARK: - Custom data model for cryptocurrencies [name, rate]
 class Historical: NSObject {
+  
   var base: String = ""
-  var rates = Double()
+  var rates: String = ""
 
     
-    init(base: String, rates: Double){
-        self.base = base
-        self.rates = rates
-    }
+  init(base: String, rates: String){
+    
+    self.base = base
+    self.rates = rates
+  }
     
 }
 

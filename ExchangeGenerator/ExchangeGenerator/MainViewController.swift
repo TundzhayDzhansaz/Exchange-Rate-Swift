@@ -99,10 +99,15 @@ extension MainViewController: UITableViewDataSource {
 //MARK:- Table View Delegate
 extension MainViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let date = Date()
+    let df = DateFormatter()
+    df.dateFormat = "yyyy-MM-dd"
+    let dateString = df.string(from: date)
+    
     tableView.deselectRow(at: indexPath, animated: true)
     let currencyName = receivedCurrencies[indexPath.row]
     //print(currencyName.base)
-    self.handleShowHistoricalView(currencyName: currencyName.base, currencyPrice: currencyName.rates, date: "2021-09-09")
+    self.handleShowHistoricalView(currencyName: currencyName.base, currencyPrice: currencyName.rates, date: "\(dateString)")
     //self.handleShowHistoricalRate(currencyName: "\(currencyName.base)", date: "2021-10-10")
   }
 }
@@ -126,7 +131,7 @@ extension MainViewController {
       
       do {
         guard let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] else { return }
-        
+        print(dict)
         guard let rates = dict["rates"] as? [String: Double], let base = dict["base"] as? String, let date = dict["date"] as? String else { return }
     
         let currencies = rates.keys.sorted()

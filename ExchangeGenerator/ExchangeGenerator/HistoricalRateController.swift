@@ -47,7 +47,7 @@ class HistoricalRateController: UIViewController {
     setupTableView()
     fetchHistoricalData()
     
-    baseCurrencyLabel.text = "EUR • \(currencyName)"
+    baseCurrencyLabel.text = "USD • \(currencyName)"
     baseCurrencyInfoLabel.text = "RealTime: \(currencyPrice)"
     
     
@@ -124,7 +124,12 @@ extension HistoricalRateController: UITableViewDelegate {
 
 extension HistoricalRateController {
   func fetchHistoricalData() {
-    let exchangerateAPI_URL = "https://api.exchangerate.host/\(date)"
+    let date = Date()
+    let df = DateFormatter()
+    df.dateFormat = "yyyy-MM-dd"
+    let dateString = df.string(from: date)
+    
+    let exchangerateAPI_URL = "https://api.exchangerate.host/timeseries?start_date=2021-01-01&end_date=\(dateString)&base=USD"
     guard let url = URL(string: exchangerateAPI_URL) else { return }
     
     let task = URLSession.shared.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
@@ -140,25 +145,28 @@ extension HistoricalRateController {
       do {
         guard let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] else { return }
         
-        guard let rates = dict["rates"] as? [String: Double], let base = dict["base"] as? String, let date = dict["date"] as? String else { return }
-    
-        let currencies = rates.keys.sorted()
-        //print(currencies)
-    
-        for currency in currencies {
-          if let rate = rates[currency] {
-            let createHistoricalData = Historical(base: "\(currency)", rates: rate)
+        guard let rates = dict["rates"] as? [String : [String: Double]], let base = dict["base"] as? String else { return }
+        
+        let arrangeDate = rates.keys.sorted { $0 > $1 }.map{ $0 }
+        
+        for dateData in arrangeDate {
+          if let rate = rates[dateData] {
+            print(dateData)
             
-            if currency == self.currencyName {
-              print(base)
-              self.historicalCurrencies.append(createHistoricalData)
+            for (key, value) in rate {
+              print(key, value)
+              if key == self.currencyName {
+                let createHistoricalData = Historical(base: "\(key)", rates: "$\(value) | \(dateData)")
+                self.historicalCurrencies.append(createHistoricalData)
+              }
             }
           }
         }
+        
         DispatchQueue.main.async {
           self.tableView.reloadData()
         }
-        print(rates)
+        
       }catch {
         print("some error")
       }
@@ -166,3 +174,5 @@ extension HistoricalRateController {
     task.resume()
   }
 }
+
+
