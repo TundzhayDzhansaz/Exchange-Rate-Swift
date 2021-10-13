@@ -1,16 +1,3 @@
-# XRate
-
-## Objective
-
-Your assignment is to implement an app displaying exchange rates for iOS devices.
-
-## Brief
-
-You won a lot of money by betting on the outcome of the European Football Championship, and now you are thinking about how you can increase long-term revenue (after spending quite a bit on a big party, of course).
-After diving into different investment strategies, you decide that you are going to try [currency trading](https://www.investopedia.com/financial-edge/0412/the-basics-of-currency-trading.aspx). And because you're a software developer, after all, creating an app that helps with that is a no-brainer - so you come up with XRate, the exchange rate helper on iOS.
-
-This assignment aims to build an app that shows a list of exchange rates using the [exchange rates API](https://exchangerate.host/) and allows to view historical data by clicking on any of the exchange rates.
-
 ## Tasks
 
 - Allow entering a base currency on the home screen from a list of currencies by searching
@@ -34,13 +21,6 @@ For iOS, include a assignment.zip file containing your compressed .app bundle in
 
 It is not important to aim for 100% completeness. We prefer well-built, tested, and scalable features over half-baked solutions.
 
-## Coderbyte
-
-Please organize, design, test and document your code as if it were going into production - then push your changes to the master branch. After you have pushed your code, you may submit the assignment on the assignment page.
-
-All the best and happy coding,
-
-The VitraCash Team
 
 ## DeveloperComment
 Project need to parse of JSON. You can find there easly getData( ) function. With use that function we need to parse data for name and rates.
