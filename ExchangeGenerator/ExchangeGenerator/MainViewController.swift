@@ -14,7 +14,7 @@ class MainViewController : UIViewController {
   let cellIdentifier = "MVCCell"
   let customCell = MVCCell()
   
-  //MARK:- Variables of Shuffle View
+  //MARK:- Variables of Main View Controller
   fileprivate var tableView: UITableView = {
     let tableView = UITableView(frame: CGRect.zero, style: UITableView.Style.plain)
     tableView.backgroundColor = .white
