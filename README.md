@@ -19,8 +19,6 @@ This project written with UIKit.
 |-------------------|-------------------|-------------------|-------------------|
 | <img src="https://github.com/TundzhayDzhansaz/Exchange-Rate-Swift/blob/main/Screens/Screenshot1.png" width="250"> | <img src="https://github.com/TundzhayDzhansaz/Exchange-Rate-Swift/blob/main/Screens/Screenshot2.png" width="250"> | <img src="https://github.com/TundzhayDzhansaz/Exchange-Rate-Swift/blob/main/Screens/Screenshot3.png" width="250"> | <img src="https://github.com/TundzhayDzhansaz/Exchange-Rate-Swift/blob/main/Screens/Screenshot4.png" width="250">
 
-| Screenshot 3      | Screenshot 4      |
-|-------------------|-------------------|
-| <img src="https://github.com/TundzhayDzhansaz/Exchange-Rate-Swift/blob/main/Screens/Screenshot3.png" width="250"> | <img src="https://github.com/TundzhayDzhansaz/Exchange-Rate-Swift/blob/main/Screens/Screenshot4.png" width="250"> |
+
 
 
